@@ -1,0 +1,41 @@
+#Clase 18/01/2023.#
+
+sudo: sirve para elevar privilegios temporalmente, con el fin de ejecutar comandos o archivos que requieren permisos especiales.
+whoami: es un comando sumamente sencillo el cual muestra el usuario actual conectado al sistema.
+gpasswd: se usa para administrar grupos de usuarios también nos permite modificar otras características de los grupos y asignar administradores de grupos.
+history: se utiliza para ver los comandos ejecutados anteriormente.
+-l: para convertir en un usuario, continuamente utilizaremos la bandera -l.
+Usseradd y adduser: ambos comandos se pueden usar para añadir usuarios la diferencia es la forma de ejecución ya que una nos desplegará una interfaz visual y otra se ejecutará con la terminal.
+chmod: conceder permisos de lectura, escritura y ejecución donde el comando va acompañado de un parámetro que se determina por medio de números donde '777' concede los permisos absolutos para todo público.
+![tabla](tabla.jpg)
+
+d: directorio
+
+r: leer
+
+w: escribir
+
+x: ejecutar
+
+-: ninguno
+
+Los permisos para un archivo son estructurados de la siguiente forma:
+
+las 3 primeras letras corresponden a los permisos del propietario del archivo.
+las siguientes 3 letras a un grupo de usuarios con los que el propietario haya compartido el archivo.
+las ultimas 3 letras a todo el mundo.
+
+Para modificar los permisos de un archivo debe hacerse con el comando: chmod + 3 números
+
+Ejemplo:
+r: 4 w: 2 x: 1
+suma de permisos por grupo = 7
+para lograr establecer los permisos de una forma satisfactoria debemos sumar el valor de las letras donde 'chmod 777' confiere todos los permisos y 'chmod 000 ' ninguno.
+
+pwd: nos permite conocer la ruta actual en la que estamos.
+
+cd: acceder a una ruta
+
+ll: conocer el contenido de un directorio
+
+touch se usa principalmente para crear archivos vacíos y cambiar marcas de tiempo de archivos o carpetas
