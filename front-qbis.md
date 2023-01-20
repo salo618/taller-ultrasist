@@ -64,3 +64,8 @@ Funcionalidades
 ![image](https://user-images.githubusercontent.com/123017277/213601419-8094f286-1997-4452-81f2-e39d75e5aaf7.png)
 
 15. al dar click en el boton de ingresar se pone un borde de color verde
+
+16. el fondo y el filtro color azul
+
+![image](https://user-images.githubusercontent.com/123017277/213732228-147a8713-ae72-49d1-aff9-5c2627d5d438.png)
+
