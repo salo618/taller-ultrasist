@@ -1,0 +1,157 @@
+# Clase 31/01/2023 #
+
+## Resumen ##
+
+Empezamos el dia revisando las presentaciones que encargo el profesor sobre git y este es un pequeño resumen de las presentaciones
+
+Aprendimos que git es un sistema de control de versiones creado por Linus Torvalds en 2005. 
+
+![image](https://user-images.githubusercontent.com/123017277/215915786-7279299a-9154-44a7-adbf-73e68bd12902.png)
+
+vimos algunas de las principales caracteristicas de git
+
+![image](https://user-images.githubusercontent.com/123017277/215919573-daf60718-3442-4a9d-81a6-cbd4d8b7e20f.png)
+
+Git tiene tres estados en los cuales trabaja
+
+![image](https://user-images.githubusercontent.com/123017277/215920713-959a6a41-8037-4513-862d-d7b51adea813.png)
+
+¿Que es una rama?
+
+![image](https://user-images.githubusercontent.com/123017277/215921838-861fe215-9f42-4064-8060-d234611a9313.png)
+
+cada circulo en la imagen representa un commit
+
+merge es la union de dos o mas ramas
+
+![image](https://user-images.githubusercontent.com/123017277/215922109-fad3f04a-183d-4552-b9fe-512383df9ea2.png)
+
+fast fordward
+
+![image](https://user-images.githubusercontent.com/123017277/215922290-c7a1a351-dad1-42b7-87de-9a9861631942.png)
+
+Tambien aprendimos algunos comandos que nos ayudan en git 
+
+![image](https://user-images.githubusercontent.com/123017277/215927953-8a6bcc34-9559-48d7-b978-66ec5d29a787.png)
+
+a si como de github
+
+![image](https://user-images.githubusercontent.com/123017277/215931027-ab545f2a-84c6-4f59-9b45-1ee828a50da0.png)
+
+
+# Rama #
+
+Las ramas son una de las principales utilidades que disponemos en Git para llevar un mejor control del código. Se trata de una bifurcación del estado del código que crea un nuevo camino de cara a la evolución del código, en paralelo a otras ramas que se puedan generar.
+
+¿Como se genera un a rama?
+
+para generara una nueva rama vamos al cajon que dice main en la parte superior izquierda de la pantalla damos clic y se depliega un mmenu que nos permite escribir el nombre que deseamos darle a la nueva rama una vez que escribimos el nombre vamos al boton que dice create branch <nombre de la rama>.
+
+![rama](https://user-images.githubusercontent.com/123017277/215935119-1e6a4503-2396-4412-b953-661524e0858c.gif)
+  
+Una vez creada podemos ver que en la parte superior nos indica que nos indica que ya tenemos 2 ramas.
+
+![image](https://user-images.githubusercontent.com/123017277/215938466-eae045db-7aba-45dc-b30c-cda3f6d6fb5a.png)
+
+Una vez hecho eso podemos ir a la terminal y clonar el repositorio con git clone <y el link de github> entramos al repositorio con cd <nombre del repositorio>.
+  
+![image](https://user-images.githubusercontent.com/123017277/215941612-ee920b24-dde6-41c2-9f8d-e2287129ce5d.png)
+  
+con git checkout podemos navegar entre las ramas. 
+  
+![image](https://user-images.githubusercontent.com/123017277/215943004-173092e3-fd4f-4aee-9669-5f45380758f8.png)
+
+Podemos ver el contenido del repositorio con ll.
+
+![image](https://user-images.githubusercontent.com/123017277/215941817-d10e2feb-0c54-4027-9955-6b03a8a6b2ed.png)
+
+Usamos el comando git branch con esto podemos ver en que rama del repositorio nos encontramos.
+  
+![image](https://user-images.githubusercontent.com/123017277/215941944-7a14123f-c1ae-442b-9ccf-40dde945cde9.png)
+
+Creamos un archivo dentro del repositorio con el comando echo y usamos nuevamente el comando git branch para verificar que estamos dentro de la rama feature/segunda-rama.
+  
+![image](https://user-images.githubusercontent.com/123017277/215962234-b09006c6-79f3-4353-8fc4-ca81c9c4af33.png)
+
+creamos una segunda rama llamada develop desde la nube
+
+![image](https://user-images.githubusercontent.com/123017277/215963348-2b851905-3951-4499-95d9-25df41b02e3a.png)
+ 
+La rama main debe de contener codigo perfecto que ya esta probado nadie debe tocarla solo el administrador.
+  
+Para hacer la rama develop nuestra rama por default nos vamos a settings y luego a branches cuando damos clic nos arroja del lado derecho una seccion que dice Default Branch damos clic en el icono de las flechas y pdemos modificar la rama a develop uuna vez terminado nos va a pedir que confirmemos nuestra decision.
+  
+![develop](https://user-images.githubusercontent.com/123017277/215965818-51c2920d-f972-46a8-874e-782017a7c8f1.gif)
+  
+hacemos una prueba para verificar que estamos en la rama develop
+  
+Salimos del repositorio en el que nos encontramso con cd .. lo borramos y volvemos a clonar el repositorio con git clone y entramos al repositorio con cd <temporal-borrar> una vez que entratramos podemos ver con gti branch -a que estamos dentro de la rama develop.
+  
+![image](https://user-images.githubusercontent.com/123017277/215970405-0815313d-875d-4118-a799-a1f6bfcc547e.png)
+
+Una vez dentro de la rama develop creamos un archivo y lo modificamos con el quijote de la mancha ya modificado ponemos el comando git add, git commit y git push nos va arrojar un error  damos git pull u git push nuevamente
+  
+![image](https://user-images.githubusercontent.com/123017277/215985526-587c70a9-1252-4858-b6c4-89772e7cf6af.png)
+  
+ahora nos podemos ir a la pagina de github donde ya podemos ver la modificaciones realizadas
+  
+![image](https://user-images.githubusercontent.com/123017277/215986231-c9b3e2f2-748b-4b40-af71-9e5c2988a9d1.png)
+  
+creamos una nueva rama en develop
+  
+![image](https://user-images.githubusercontent.com/123017277/215987829-bbdc4a5f-713c-446c-864b-2129676bd6cb.png)
+  
+cambiamos de rama con git checkout y el nombre de la rama y verificamos que se haga el cambio con git branch -a
+  
+  ![image](https://user-images.githubusercontent.com/123017277/215988800-c24b6bc9-e3cb-49ca-842f-23360ac59378.png)
+
+entramos al archivo con nano
+  
+  ![image](https://user-images.githubusercontent.com/123017277/215989042-3a81ea45-5d98-4fec-89ae-d707d10562bc.png)
+  
+realizamos modificaciones
+  
+  ![image](https://user-images.githubusercontent.com/123017277/215989246-cc6a78ea-54cd-43dd-aea5-4b250238123a.png)
+  
+  Una vez realizados los cambio damos git add git commit y git push
+  
+![image](https://user-images.githubusercontent.com/123017277/215990799-2d96647e-01a2-421f-969f-89af2bb3e42b.png)
+  
+Lo que sigue es ir a git hub dar clic en el boton pull request y luego en crear pull request con esto enviamos a revision nuestro codigo por alguno de los compañeros que tenga permisos para pder entrar al repositorio
+
+![pull request](https://user-images.githubusercontent.com/123017277/215991852-922311d3-8bbc-4556-a66f-7ac2b974af1d.gif)
+
+una vez hecho esto podemos ir al archivo y va a aparecer los cambios que realizamos 
+  
+  ![image](https://user-images.githubusercontent.com/123017277/215992790-8a32381c-73c1-4512-8538-f92da5653dd4.png)
+
+Dando clic en el signo de mas podemos agregar un comentario al finalizzar damos en submit review para que el compañero pueda ver los comentarios
+
+![image](https://user-images.githubusercontent.com/123017277/215993507-5cec6beb-cf68-4eb1-aa05-7071f64a7400.png)
+  
+una vez que se envio a revision a mi compañero le llega una notificacion de que hicimos cambios y debe revisarlos
+
+![image](https://user-images.githubusercontent.com/123017277/215994235-74d19c1c-a51b-4012-a47e-9d8fff3d9944.png)
+  
+el puede entrar a mi repositorio y ver los cambios realizados, verificarlos y una vez validados el me da sus observaciones
+
+![image](https://user-images.githubusercontent.com/123017277/215996469-abcb22ed-b5ee-4c48-b1e9-4f08844365f5.png)
+  
+una vez que llegamos a un acuerdo damos en el boton  Resolve conversation
+  
+![image](https://user-images.githubusercontent.com/123017277/215996859-34f5fb2c-4455-4602-ac65-bbd4abc8d5b5.png)
+  
+se pueden aprobar los cambios
+  
+![image](https://user-images.githubusercontent.com/123017277/215997433-eb1613d9-598e-4a00-92ad-95b9e97a1912.png)
+  
+A este proceso se le llama git flow
+  
+
+
+
+
+
+
+
+  
