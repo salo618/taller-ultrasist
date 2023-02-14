@@ -91,6 +91,17 @@ public class Coche{
        this.año = año;
    }
 
+   // Método modelo
+   public void modelo(){
+       System.out.println("La marca es  "+marca+", y no tiene modelo");
+   }
+
+   // Método modelo sobrecargado
+   public void modelo(String modelo){
+       System.out.println("La marca es  "+marca+", y el modelo es de  " +modelo);
+   }
+}
+
 ## Metodo super ##
 
 Esta palabra super se utiliza en el lenguaje Java para invocar al método constructor de una clase superior (clase padre) de la cual queremos utilizar el mismo tipo de parametrización, entonces esta palabrita sube de categoría y pasa a ser el método super().
