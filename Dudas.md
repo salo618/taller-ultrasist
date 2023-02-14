@@ -8,7 +8,7 @@ Clase abstracta :
 
 - Se utilizan sólo como super clases.
 - No se pueden instanciar objetos.
-- Sirve para proporcioner una super clase apropiada apartir de la cual heredan otras clases.
+- Sirve para proporcionar una super clase apropiada a partir de la cual heredan otras clases.
 
 ## Sobre escritura ##
 
@@ -45,10 +45,10 @@ Para que funcione adecuadamente, la sobreescritura de métodos en Java debe cump
 - El método debe tener el mismo nombre tanto en la clase principal como en la clase hija o subclase.
 - Tanto la lista de parámetros como el tipo de valor devuelto, deben ser iguales en ambas clases (principal y subclase).
 - Es imprescindible que haya una clase principal donde se declare el método y una clase hija que también lo implemente, es decir, es necesaria una relación de herencia.
-- Cada uno de los métodos que son declarados como abstractos en la clase principal, deben ser sobreescritos en la clase hija.
-- Si los métodos se declaran como estáticos, no se pueden sobreescribir.
+- Cada uno de los métodos que son declarados como abstractos en la clase principal, deben ser sobrescritos en la clase hija.
+- Si los métodos se declaran como estáticos, no se pueden sobrescribir.
 
-## Sobrecarga de Metodos ##
+## Sobrecarga de Métodos ##
 
 Se le llama sobrecarga de funciones o métodos a la creación de varias funciones dentro de nuestro programa, que tienen el mismo nombre, pero sus argumentos son distintos y realizan distinta acción.
 
@@ -63,7 +63,7 @@ class Empleado {  //clase general
     }
 }
 
-class Gerente extends Empleado { //aquí estamos sobreescribiendo el método de la clase principal
+class Gerente extends Empleado { //aquí estamos sobrescribiendo el método de la clase principal
     @Override
     int salario() {
         return base + 200;
@@ -94,7 +94,7 @@ static void imprimirSalario(Empleado Empleado) {
 }
    
 
-## Metodo super ##
+## Método super ##
 
 Esta palabra super se utiliza en el lenguaje Java para invocar al método constructor de una clase superior (clase padre) de la cual queremos utilizar el mismo tipo de parametrización, entonces esta palabrita sube de categoría y pasa a ser el método super().
 
@@ -106,17 +106,45 @@ El método super nos permite reutilizar bloques de código sin tener que volver 
 
 Cuando queremos acceder a los atributos y/o métodos de una clase superior, utilizamos la herencia (una clase hija “hereda” de una clase padre sus atributos y métodos), y creamos una nueva clase que es extendida de la clase principal, cuya primera línea del constructor debe ser siempre el método super().
 
-Es muy importante el uso del método super(), ya que así evitamos la ambigüedad que puede generarle a la JVM (Java Virtual Machine) que una clase derivada y una clase base utilicen un método con el mismo nombre pero con distinta funcionalidad.
+Es muy importante el uso del método super(), ya que así evitamos la ambigüedad que puede generarle a la JVM (Java Virtual Machine) que una clase derivada y una clase base utilicen un método con el mismo nombre, pero con distinta funcionalidad.
 
 Con la palabra super hacemos referencia a su clase padre. 
 
-Además podemos usar la palabra super para inicializar atributos de la clase superior de la que se extiende con la palabra extends.
+Además, podemos usar la palabra super para inicializar atributos de la clase superior de la que se extiende con la palabra extends.
 
-Las clases hijas pueden sobreescribir métodos de las clases padre y luego invocarlos con la cláusula super.
+Las clases hijas pueden sobrescribir métodos de las clases padre y luego invocarlos con la cláusula super.
 
 Ejemplo de método super en Java
 
+package com.opus4;
 
+public class Mascota {// clase padre
+   public void sonidoMascota() {//método de la clase padre sin parámetros
+       System.out.println("Qué tipo de sonido hace la mascota");
+   }
+
+// Una clase hija llamando a través del método super al método de la clase padre   
+static class Gato extends Mascota { // clase hija
+       public void sonidoMascota() {
+              super.sonidoMascota(); 
+           System.out.println("El Gato dice miauuuu");
+       }
+   }
+// Otra clase hija llamando a través del método super al método de la clase padre
+
+    static class Perro extends Mascota { 
+        public void sonidoMascota() {
+            super.sonidoMascota(); 
+            System.out.println("El Perro dice guaauu");
+        }
+    }
+           public static void main(String[] args) {
+               Mascota gato = new Gato(); // instanciamos un objeto
+               Mascota perro = new Perro(); //instanciamos otro objeto
+               gato.sonidoMascota();
+              perro.sonidoMascota();
+           }
+}
 
 ## this ##
 
@@ -140,6 +168,7 @@ class Forma extends Poligono{
 	   return (base*altura) / 2;
    }
 }
+
 
 ## Duda 1 ##
 
