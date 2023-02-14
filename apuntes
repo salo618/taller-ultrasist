@@ -1,0 +1,26 @@
+# Clase 13/02/23 #
+
+## Resumen ##
+
+### Polimorfismo ###
+
+El polimorfismo hace referencia a la cualidad por la que un objeto adquiere o puede tener diferentes formas. En Java, el polimorfismo alude al modo en que se pueden crear y utilizar dos o más métodos con el mismo nombre para ejecutar funciones diferentes.
+
+![image](https://user-images.githubusercontent.com/123017277/218624396-79bb9e9d-1387-4273-9301-a127a45f6273.png)
+
+### Convenciones ###
+
+1. Los nombres de la clases y los nombres de las interfaces inician con mayúsculas.
+2. los nombres de los métodos y los nombres de los atributos inician con minúsculas.
+3. los constructores inician con mayúsculas por que se llaman igual que la clase.
+4. 2 o más palabras se dividen por letras mayúsculas Enmedio(camel Case).
+5. los nombre de los paquetes son todos en minúsculas respetando la regla anterior.
+6. las clases y las interfaces deben llevar nombres en singular a menos que sea absolutamente usar plural.
+
+### Equals ###
+
+los números se comparan con == las cadenas no
+
+Anotaciones hay algunas que son decorativas y hay algunas que son esenciales
+
+![image](https://user-images.githubusercontent.com/123017277/218624745-20de0cea-8057-4878-a47f-bd12e53addac.png)
