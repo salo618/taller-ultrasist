@@ -16,6 +16,46 @@ La sobreescritura en Java también es conocida con el nombre de polimorfismo de 
 
 Ejemplo de sobre escritura en Java
 
+public class Coche{
+   
+   //Atributos
+   
+   String marca;
+   
+   int año;
+
+   //Métodos
+   
+   //Método Constructor
+   
+   public Coche(String marca){
+       this.marca = marca;
+   }
+
+   // Método Constructor Sobrecargado
+   
+   public Coche(String marca, int año){
+   this.marca = marca;
+   this.año = año;
+   }
+
+    
+Para que funcione adecuadamente, la sobreescritura de métodos en Java debe cumplir con las siguientes condiciones:
+
+- El método debe tener el mismo nombre tanto en la clase principal como en la clase hija o subclase.
+- Tanto la lista de parámetros como el tipo de valor devuelto, deben ser iguales en ambas clases (principal y subclase).
+- Es imprescindible que haya una clase principal donde se declare el método y una clase hija que también lo implemente, es decir, es necesaria una relación de herencia.
+- Cada uno de los métodos que son declarados como abstractos en la clase principal, deben ser sobreescritos en la clase hija.
+- Si los métodos se declaran como estáticos, no se pueden sobreescribir.
+
+## Sobrecarga de Metodos ##
+
+Se le llama sobrecarga de funciones o métodos a la creación de varias funciones dentro de nuestro programa, que tienen el mismo nombre, pero sus argumentos son distintos y realizan distinta acción.
+
+Básicamente sobrecargar significa definir nuevos métodos con parámetros distintos para ampliar las funcionalidades del método original, manteniendo la calidad en el código, reutilizando las funciones, sin extender la cantidad de líneas en nuestro programa.
+
+Ejemplo de sobrecarga de métodos en Java
+
 class Empleado {  //clase general
     public static int base = 400;
     int salario() {
@@ -38,69 +78,21 @@ class Supervisor extends Empleado {
 }
 
 class Main { // con esto vamos a imprimir el salario de cualquier trabajador
-
-    static void imprimirSalario(Empleado Empleado) {
+static void imprimirSalario(Empleado Empleado) {
         System.out.println(Empleado.salario());
-    }
-
-    public static void main(String[] args) {
-
-        Empleado Gerente = new Gerente();
+	 public static void main(String[] args) {
+	  Empleado Gerente = new Gerente();
         System.out.println("El salario del gerente es: ");
         imprimirSalario(Gerente);
-
-        Empleado Supervisor = new Supervisor();
+	Empleado Supervisor = new Supervisor();
         System.out.println("El salario del supervisor es: ");
         imprimirSalario(Supervisor);
-
-        Empleado Empleado1 = new Empleado();
+	Empleado Empleado1 = new Empleado();
         System.out.println("El salario del empleado es: ");
         imprimirSalario(Empleado1);
-    }
-    
-Para que funcione adecuadamente, la sobreescritura de métodos en Java debe cumplir con las siguientes condiciones:
-
-- El método debe tener el mismo nombre tanto en la clase principal como en la clase hija o subclase.
-- Tanto la lista de parámetros como el tipo de valor devuelto, deben ser iguales en ambas clases (principal y subclase).
-- Es imprescindible que haya una clase principal donde se declare el método y una clase hija que también lo implemente, es decir, es necesaria una relación de herencia.
-- Cada uno de los métodos que son declarados como abstractos en la clase principal, deben ser sobreescritos en la clase hija.
-- Si los métodos se declaran como estáticos, no se pueden sobreescribir.
-
-## Sobrecarga de Metodos ##
-
-Se le llama sobrecarga de funciones o métodos a la creación de varias funciones dentro de nuestro programa, que tienen el mismo nombre, pero sus argumentos son distintos y realizan distinta acción.
-
-Básicamente sobrecargar significa definir nuevos métodos con parámetros distintos para ampliar las funcionalidades del método original, manteniendo la calidad en el código, reutilizando las funciones, sin extender la cantidad de líneas en nuestro programa.
-
-Ejemplo de sobrecarga de métodos en Java
-
-public class Coche{
-   //Atributos
-   String marca;
-   int año;
-
-   //Métodos
-   //Método Constructor
-   public Coche(String marca){
-       this.marca = marca;
-   }
-
-   // Método Constructor Sobrecargado
-   public Coche(String marca, int año){
-       this.marca = marca;
-       this.año = año;
-   }
-
-   // Método modelo
-   public void modelo(){
-       System.out.println("La marca es  "+marca+", y no tiene modelo");
-   }
-
-   // Método modelo sobrecargado
-   public void modelo(String modelo){
-       System.out.println("La marca es  "+marca+", y el modelo es de  " +modelo);
-   }
+	}
 }
+   
 
 ## Metodo super ##
 
@@ -124,35 +116,7 @@ Las clases hijas pueden sobreescribir métodos de las clases padre y luego invoc
 
 Ejemplo de método super en Java
 
-package com.opus4;
 
-public class Mascota {// clase padre
-   public void sonidoMascota() {//método de la clase padre sin parámetros
-       System.out.println("Qué tipo de sonido hace la mascota");
-   }
-
-// Una clase hija llamando a través del método super al método de la clase padre   
-static class Gato extends Mascota { // clase hija
-       public void sonidoMascota() {
-              super.sonidoMascota(); 
-           System.out.println("El Gato dice miauuuu");
-       }
-   }
-// Otra clase hija llamando a través del método super al método de la clase padre
-
-    static class Perro extends Mascota { 
-        public void sonidoMascota() {
-            super.sonidoMascota(); 
-            System.out.println("El Perro dice guaauu");
-        }
-    }
-           public static void main(String[] args) {
-               Mascota gato = new Gato(); // instanciamos un objeto
-               Mascota perro = new Perro(); //instanciamos otro objeto
-               gato.sonidoMascota();
-              perro.sonidoMascota();
-           }
-}
 
 ## this ##
 
