@@ -149,7 +149,22 @@ Cuando se efectúa un llamado un método, se pasa en forma automática un argume
 
 En el siguiente ejemplo se puede ver a this en un programa.
 
+package mx.qbits.ejemplo4;
 
+class Forma extends Poligono{
+      private double base;
+      private double altura;
+
+   public Forma(double base, double altura) {
+	   super(3);
+	   this.base = base;
+	   this.altura = altura;
+	   
+   }
+   public double AreaCalculada() {
+	   return (base*altura) / 2;
+   }
+}
 
 ## Duda 1 ##
 
