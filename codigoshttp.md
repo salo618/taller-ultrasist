@@ -5,7 +5,7 @@
 
 La solicitud se está procesando
 
-| Codigo | Descripcion |
+| Código | Descripción |
 | ----------- | ----------- |
 | 100 | Continue. Encabezado solicitado, recibido y aceptado, listo para recibir el cuerpo de la petición. |
 | 101 | Switching protocols. Tu navegador solicita una actualización del encabezado, el servidor funciona correctamente. |
@@ -16,7 +16,7 @@ La solicitud se está procesando
 
 La solicitud se ha completado con éxito y el navegador ha recibido información. 
 
-| Código | Descripcion |
+| Código | Descripción |
 | ----------- | ----------- |
 | 200 | Everything OK. La solicitud se ha completado con éxito y está definida por el método HTTP utilizado |
 | 201 | Accepted. La solicitud del navegador ha sido aceptada, pero sigue en proceso. Puede tener éxito o no. |
@@ -27,7 +27,7 @@ La solicitud se ha completado con éxito y el navegador ha recibido información
 | 206 | Partial content. Si tu navegador utiliza “range headers”, este código te informa que solo se ha enviado una parte de la fuente. |
 | 226 | IM used. El servidor ha recibido una solicitud GET, pero la respuesta refleja una manipulación de la instancia. |
 
-## Metodos HTTP ##
+## Métodos HTTP ##
 
 - GET: el recurso se ha obtenido y está en el cuerpo del mensaje.
 - HEAD: los encabezados están en el cuerpo del mensaje.
@@ -38,7 +38,7 @@ La solicitud se ha completado con éxito y el navegador ha recibido información
 
 Indica que un recurso ha sido realojado. Estos códigos ofrecen información sobre dónde buscar el contenido realojado.
 
-| Código | Descripcion |
+| Código | Descripción |
 | ----------- | ----------- |
 | 300 | Multiple choice. La solicitud tiene más de una respuesta posible. El navegador/usuario debe elegir una. |
 | 301 | Moved permanently. La URL de la fuente solicitada ha cambiado de forma permanente. La nueva URL se ofrece en la respuesta. |
@@ -52,7 +52,7 @@ Indica que un recurso ha sido realojado. Estos códigos ofrecen información sob
 
 No se puede encontrar la web o la página. La página no está disponible o la solicitud es técnicamente problemática.
 
-| Código | Descripcion |
+| Código | Descripción |
 | ----------- | ----------- |
 | 400 | Bad request. El servidor no puede responder debido a un error con el cliente. |
 | 401 | Unauthorized. El cliente debe autentificarse para obtener una respuesta. |
