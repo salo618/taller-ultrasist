@@ -2,7 +2,7 @@
 
 | Nombre del archivo |  Descripción |
 | --- | --- |
-| [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/) | This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements.|
+| [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/) | This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. |
 | [GitHub](https://github.com/)  |Página principal de GitHub| 
 | [Liga de clase](https://ultra-media.s3.amazonaws.com/curso/2023-01-24.mp4) | Al final de la liga viene una fecha la cual es el día de la clase, podemos ingresar a cada clase con tan solo cambair la fecha de la clase que queramos ver. | 
 | [discord](https://discord.com/) | página principal de Discord | 
